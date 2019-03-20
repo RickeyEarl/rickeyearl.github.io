@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brackets</title>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="./jquery.bracket.min.css">
+</head>
+<body>
+	<div class="row">
+		<div class="demo"></div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="jquery.bracket.min.js"></script>
+	<script>
+
+		var minimalData = {"teams": [["Happily Ever After", null], [null, null], ["Rivers of Light", null], ["    Star Wars: A Galactic Spectacular", null], ["Illuminations: Reflections of Earth", null], ["Tree of Life: Awakenings", null], ["    Fantasmic!", null], ["Once Upon A Time", null], ["    Festival of the Lion King", null], ["    Mickey's Royal Friendship Faire stage show", "Up! Great Bird Adventure"], ["    For the First Time in Forever: A Frozen Sing-Along Celebration", null], ["    Indiana Jones Epic Stunt Spectacular!", null], ["    Beauty and the Beast Live on Stage", null], ["    Disney Junior - Live", null], ["    Finding Nemo: The Musical", null], ["    Voyage of the Little Mermaid", null], ["    Meet and Greet Anna and Elsa from Frozen", null], ["    Casey Jr, Splash 'N' Soak Station", null], ["Epcot Character Spot", null], ["Princess Fairytale Hall: Cindy/Elena", null], ["    Enchanted Tales with Belle", null], ["    Celebrity Spotlight", null], ["    Jedi Training: Trials of the Temple", null], ["Princess Fairytale Hall: Tiana/Punzie", null], ["Monorail", null], ["Tram", "Bus"], ["Boat Launch", null], ["Boat Cruiser", null], ["Ferry Boat", null], ["    Wildlife Express Train", null], ["Friendship Boats", null], ["    Walt Disney World Railroad", null], ["    Seven Dwarfs Mine Train", null], ["    Splash Mountain", "    The Barnstormer"], ["    Rock 'n' Roller Coaster Starring Aerosmith", null], ["    Big Thunder Mountain Railroad", null], ["    Space Mountain", null], ["    Expedition Everest - Legend of the Forbidden Mountain", "    Primeval Whirl"], ["    Test Track", null], ["    The Twilight Zone Tower of Terror", null], ["    Avatar Flight of Passage", null], [null, null], ["    Soarin'", null], ["    Kali River Rapids", null], ["    Dinosaur", null], [null, null], ["    Star Tours: The Adventures Continue", null], ["    Mission: SPACE", null], ["    SeaBase", null], [null, null], ["    American Heritage Gallery", null], ["    House of the Whispering Willows", null], ["    Stave Church Gallery", null], ["    Gallery of Arts and History", null], ["    Bijutsu-kan Gallery", null], ["    Mexico Folk Art Gallery", null], ["    Tom Sawyer Island", null], ["    Conservation Station", "    Boneyard"], ["    Affection Section", "    The Oasis Exhibits"], ["    Pangani Forest Exploration Trail", "    Cretaceous Trail"], ["    Star Wars Launch Bay", null], ["    Dino Sue", "    Discovery Island Trails"], ["    Tree of Life", null], ["    Swiss Family Treehouse", "    Maharajah Jungle Trek"], ["\ufeff    Jungle Cruise", null], [null, null], ["    Tomorrowland Speedway", null], ["    Main Street Vehicles \u2013 Themed Area", null], ["    People Mover", null], [null, null], ["    Liberty Square Riverboat", null], [null, null], ["    Dumbo the Flying Elephant", null], [null, null], ["    Prince Charming Regal Carrousel", null], ["    The Magic Carpets of Aladdin", null], ["    Mad Tea Party", null], [null, null], ["    Astro Orbiter", null], ["    TriceraTop Spin", null], ["    Frozen Ever After", null], [null, null], ["    Living with the Land", null], ["    It's a Small World", null], ["    Pirates of the Caribbean", null], [null, null], ["    Na'vi River Journey", null], ["    Gran Fiesta Tour Starring The Three Caballeros", null], ["    Toy Story Mania!", null], [null, null], ["    Journey into Imagination with Figment", null], ["    Walt Disney's Carousel of Progress", null], ["    Peter Pan's Flight", null], [null, null], ["    Kilimanjaro Safaris", null], ["    The Many Adventures of Winnie the Pooh", null], ["    Haunted Mansion", null], [null, null], ["    The Seas with Nemo & Friends", null], ["    Under the Sea ~ Journey of The Little Mermaid", null], ["    Spaceship Earth", null], [null, null], ["    Buzz Lightyear's Space Ranger Spin", null], [null, null], ["    Turtle Talk with Crush", null], ["    Walt Disney Presents", "    Disney & Pixar Short Film Festival"], ["    Muppet*Vision 3D", null], ["    Mickey's Philharmagic", null], ["    Monsters, Inc. Laugh Floor", null], ["    Impressions de France", "    Reflections of China"], ["    It's Tough to be a Bug", null], ["    O Canada!", null], ["    Sorcerers of the Magic Kingdom", null], ["    Innoventions", "    Project Tomorrow: Inventing the Wonders of the Future"], ["    Wilderness Explorers", null], ["    ImageWorks: The What-If Labs", null], ["    A Pirate's Adventure ~ Treasures of the Seven Seas", null], ["    Frontierland Shootin' Arcade", "    Advanced Training Lab"], ["    Kidcot Fun Stops", null], ["    Disney Phineas and Ferb: Agent P's World Showcase Adventure", "    Fossil Fun Games"], ["    Enchanted Tiki Room", null], [null, null], ["    The Hall of Presidents", null], [null, null], ["    Country Bear Jamboree", null], [null, null], ["    The American Adventure", null], [null, null]]}
+		 
+		// $(function() {
+		//     $('.demo').bracket({
+		//       init: minimalData /* data to initialize the bracket with */ })
+		//   })
+
+		function saveFn(data, userData) {
+		  var json = jQuery.toJSON(data)
+		  $('#saveOutput').text('POST '+userData+' '+json)
+		  /* You probably want to do something like this
+		  jQuery.ajax("rest/"+userData, {contentType: 'application/json',
+		                                dataType: 'json',
+		                                type: 'post',
+		                                data: json})
+		  */
+		}
+		 
+		$(function() {
+		    var container = $('.demo')
+		    container.bracket({
+		    teamWidth : 200,
+		    scoreWidth: 20,
+		    matchMargin : 12,
+		    roundMargin : 50,
+		    init: minimalData,
+		    // save: saveFn,
+		    // userData: "http://myapi"
+		})
+		 
+		    /* You can also inquiry the current data */
+		    var data = container.bracket('data')
+		    $('#dataOutput').text(jQuery.toJSON(data))
+		  })
+
+		</script>
+</body>
+</html>
